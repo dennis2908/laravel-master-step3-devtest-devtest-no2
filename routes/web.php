@@ -13,8 +13,11 @@
 
 use Facades\App\Http\Routes\Register;
 
+Route::get('/', function () {
+    // Validate the request...
 
-Route::get('/', 'MainController@index');
+    return redirect('/login');
+});
 
 Auth::routes();
 
